@@ -3,8 +3,7 @@
     "description": "World of Warcraft api module",
     "license": "MIT",
     "require": {
-        "game-scan/core": "dev-master",
-        "vlucas/phpdotenv": "~2.0"
+        "game-scan/core": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.6"
