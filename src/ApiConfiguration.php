@@ -3,9 +3,9 @@
 use GameScan\Core\Request\Api\ApiConfigurationInterface;
 use GameScan\Core\Tools\Environment;
 
-class WoWConfiguration implements ApiConfigurationInterface
+class ApiConfiguration implements ApiConfigurationInterface
 {
-    private  $apiKey = null;
+    private $apiKey = null;
 
     /**
      * Get parameters mandatory for request an api
@@ -29,10 +29,9 @@ class WoWConfiguration implements ApiConfigurationInterface
 
     private function getApiKey()
     {
-        if($this->apiKey === null){
+        if ($this->apiKey === null) {
             $this->apiKey =  (new Environment())->get("WOW_API_KEY");
         }
         return $this->apiKey;
     }
-
 }
