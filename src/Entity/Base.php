@@ -5,6 +5,9 @@ use GameScan\WoW\WowApiRequest;
 class Base
 {
 
+    /**
+     * @type WowApiRequest
+     */
     protected $apiRequest = null;
 
     public function setApiRequest(WowApiRequest $apiRequest)
