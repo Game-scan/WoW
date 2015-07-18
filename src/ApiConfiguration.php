@@ -14,7 +14,7 @@ class ApiConfiguration implements ApiConfigurationInterface
     public function getParameters()
     {
         return [
-          "apikey"  => $this->getApiKey()
+            "apikey" => $this->getApiKey()
         ];
     }
 
@@ -30,7 +30,7 @@ class ApiConfiguration implements ApiConfigurationInterface
     private function getApiKey()
     {
         if ($this->apiKey === null) {
-            $this->apiKey =  (new Environment())->get("WOW_API_KEY");
+            $this->apiKey = (new Environment())->get("WOW_API_KEY");
         }
         return $this->apiKey;
     }

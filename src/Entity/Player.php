@@ -21,7 +21,7 @@ class Player extends Base
 
     public function getRessource()
     {
-        return "wow/character/". $this->realmName ."/" . $this->characterName;
+        return "wow/character/" . $this->realmName . "/" . $this->characterName;
     }
 
     public function getLastModified()
