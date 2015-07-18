@@ -1,6 +1,7 @@
 <?php namespace GameScan\WoW;
 
 use GameScan\Core\Request\Api\GameApiRequest;
+use GameScan\WoW\Exceptions\HostNotFoundException;
 
 class WowApiRequest extends GameApiRequest
 {
@@ -14,7 +15,7 @@ class WowApiRequest extends GameApiRequest
     public function setLocale()
     {
         if($this->host === null){
-            throw new
+            throw new HostNotFoundException;
         }
     }
 }
