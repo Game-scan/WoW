@@ -2,12 +2,12 @@
 
 abstract class HostInformations
 {
-    public static function getHost()
+    public function getHost()
     {
         return static::HOST;
     }
 
-    public static function getAvailableLocales()
+    public function getAvailableLocales()
     {
         return static::availableLocales;
     }

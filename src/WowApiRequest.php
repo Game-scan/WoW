@@ -6,6 +6,9 @@ use GameScan\WoW\Exceptions\HostNotFoundException;
 
 class WowApiRequest extends GameApiRequest
 {
+    /**
+     * @type HostInformations
+     */
     private $host = null;
     private $locale = null;
 
@@ -16,19 +19,44 @@ class WowApiRequest extends GameApiRequest
 
     public function setLocale($locale)
     {
-        if($this->host === null){
+        $this->checkHost();
+        if ($this->isAvailableLocale($locale)) {
+            $this->locale = $locale;
+        } else {
+            LoggerFactory::getLogger()->info("The locale $locale isn't available for the host " . $this->host->getHost());
+        }
+    }
+    private function checkHost()
+    {
+        if ($this->host === null) {
             throw new HostNotFoundException;
         }
-        if($this->isAvailableLocale($locale)){
-            $this->locale = $locale;
-        }else{
-            LoggerFactory::getLogger()->info("The locale $locale isn't available for the host " . $this->host->getHost() );
-        }
-
     }
 
     private function isAvailableLocale($locale)
     {
         return in_array($locale, $this->host->getAvailableLocales(), true);
+    }
+
+    public function get($ressourceToGrab, array $parameters = null)
+    {
+        $this->checkHost();
+        $ressourceToGrab = $this->buildUrl($ressourceToGrab);
+        $parameters = $this->addLocaleToParameters($parameters);
+        return parent::get($ressourceToGrab, $parameters);
+    }
+
+    private function buildUrl($ressourceToGrab)
+    {
+        $ressourceToGrab = $this->host . $ressourceToGrab;
+        return $ressourceToGrab;
+    }
+
+    private function addLocaleToParameters($parameters)
+    {
+        if ($parameters === null || $this->locale === null) {
+            return $parameters;
+        }
+        return $parameters['locale'] = $this->locale;
     }
 }
