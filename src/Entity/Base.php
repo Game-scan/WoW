@@ -6,10 +6,13 @@ use GameScan\WoW\WowApiRequest;
 class Base
 {
 
-    protected $apiRequest;
+    protected $apiRequest = null;
 
-    public function __construct(WowApiRequest $apiRequest = null)
+    protected function getApiRequest()
     {
-        $this->apiRequest = $apiRequest !== null ? $apiRequest : new WowApiRequest(new ApiConfiguration());
+        if($this->apiRequest === null){
+            $this->apiRequest =  new WowApiRequest(new ApiConfiguration());
+        }
+        return $this->apiRequest;
     }
 }
