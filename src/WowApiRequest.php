@@ -7,6 +7,7 @@ use GameScan\WoW\Exceptions\HostNotFoundException;
 class WowApiRequest extends GameApiRequest
 {
     private $host = null;
+    private $locale = null;
 
     public function setHost(HostInformations $hostInformations)
     {
