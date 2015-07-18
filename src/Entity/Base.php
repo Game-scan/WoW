@@ -10,9 +10,14 @@ class Base
 
     protected function getApiRequest()
     {
-        if($this->apiRequest === null){
+        if ($this->apiRequest === null) {
             $this->apiRequest =  new WowApiRequest(new ApiConfiguration());
         }
         return $this->apiRequest;
+    }
+
+    public function setApiRequest(WowApiRequest $apiRequest)
+    {
+        $this->apiRequest = $apiRequest;
     }
 }
