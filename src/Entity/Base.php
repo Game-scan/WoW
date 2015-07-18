@@ -1,5 +1,6 @@
 <?php namespace GameScan\WoW\Entity;
 
+use GameScan\WoW\Exceptions\EntityInformationDecodeException;
 use GameScan\WoW\WowApiRequest;
 
 abstract class Base
@@ -28,5 +29,17 @@ abstract class Base
     public function loadInformation()
     {
         $this->entityInformation = $this->apiRequest->get($this->getRessource(), $this->getParametters());
+    }
+
+    protected function getEntityInformations()
+    {
+        if ($this->entityInformation === null) {
+            $this->loadInformation();
+        }
+        $entityInformation = json_decode($this->entityInformation);
+        if (JSON_ERROR_NONE !== json_last_error()) {
+            throw new EntityInformationDecodeException(json_last_error_msg());
+        }
+        return $entityInformation;
     }
 }
