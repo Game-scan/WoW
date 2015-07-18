@@ -42,4 +42,9 @@ abstract class Base
         }
         return $entityInformation;
     }
+
+    public function __toString()
+    {
+        return $this->entityInformation;
+    }
 }
