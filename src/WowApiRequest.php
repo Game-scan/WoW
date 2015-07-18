@@ -48,7 +48,7 @@ class WowApiRequest extends GameApiRequest
 
     private function buildUrl($ressourceToGrab)
     {
-        $ressourceToGrab = $this->host . $ressourceToGrab;
+        $ressourceToGrab = $this->host->getHost() . $ressourceToGrab;
         return $ressourceToGrab;
     }
 
