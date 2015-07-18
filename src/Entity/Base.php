@@ -2,7 +2,7 @@
 
 use GameScan\WoW\WowApiRequest;
 
-class Base
+abstract class Base
 {
 
     /**
@@ -14,4 +14,6 @@ class Base
     {
         $this->apiRequest = $apiRequest;
     }
+
+    abstract public function getRessource();
 }
