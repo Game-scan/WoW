@@ -2,6 +2,6 @@
 
 use \GameScan\Core\Exceptions\Base as BaseExeption;
 
-class EntityInformationDecodeException extends BaseExeption {
-
-} 
+class EntityInformationDecodeException extends BaseExeption
+{
+}
