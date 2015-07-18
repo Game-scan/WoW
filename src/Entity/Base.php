@@ -9,7 +9,7 @@ abstract class Base
      * @type WowApiRequest
      */
     protected $apiRequest = null;
-    protected $playerInformation = null;
+    protected $entityInformation = null;
     protected $parameters = null;
 
 
@@ -27,6 +27,6 @@ abstract class Base
 
     public function loadInformation()
     {
-        $this->playerInformation = $this->apiRequest->get($this->getRessource(), $this->getParametters());
+        $this->entityInformation = $this->apiRequest->get($this->getRessource(), $this->getParametters());
     }
 }
