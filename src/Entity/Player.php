@@ -1,16 +1,19 @@
 <?php namespace GameScan\WoW\Entity;
 
+use GameScan\WoW\WowApiRequest;
+
 class Player extends Base
 {
 
     protected $realmName;
     protected $characterName;
 
-    public function __construct($realmName, $characterName, $locale = null)
+    public function __construct(WowApiRequest $api, $realmName, $characterName, $locale = null)
     {
+        $this->apiRequest = $api;
         $this->realmName = $realmName;
         $this->characterName = $characterName;
-        if($locale !== null){
+        if ($locale !== null) {
             $this->apiRequest->setLocale($locale);
         }
     }
