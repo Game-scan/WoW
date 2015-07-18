@@ -16,5 +16,11 @@ class Player extends Base
         if ($locale !== null) {
             $this->apiRequest->setLocale($locale);
         }
+        $this->loadInformation();
+    }
+
+    public function getRessource()
+    {
+        return "wow/character/". $this->realmName ."/" . $this->characterName;
     }
 }

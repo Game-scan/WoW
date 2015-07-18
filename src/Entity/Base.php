@@ -10,6 +10,7 @@ abstract class Base
      */
     protected $apiRequest = null;
     protected $playerInformation = null;
+    protected $parameters = null;
 
 
     public function setApiRequest(WowApiRequest $apiRequest)
@@ -18,7 +19,11 @@ abstract class Base
     }
 
     abstract public function getRessource();
-    abstract public function getParametters();
+
+    public function getParametters()
+    {
+        return $this->parameters;
+    }
 
     public function loadInformation()
     {
