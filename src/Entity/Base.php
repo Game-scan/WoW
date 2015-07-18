@@ -9,6 +9,8 @@ abstract class Base
      * @type WowApiRequest
      */
     protected $apiRequest = null;
+    protected $playerInformation = null;
+
 
     public function setApiRequest(WowApiRequest $apiRequest)
     {
@@ -16,4 +18,10 @@ abstract class Base
     }
 
     abstract public function getRessource();
+    abstract public function getParametters();
+
+    public function loadInformation()
+    {
+        $this->playerInformation = $this->apiRequest->get($this->getRessource(), $this->getParametters());
+    }
 }
