@@ -2,10 +2,11 @@
 
 use GameScan\WoW\WowApiRequest;
 use GameScan\WoW\Entity\Player\Base as PlayerBase;
+use GameScan\WoW\Entity\Player\Items as PlayerItems;
 
 class Player extends Base
 {
-    use PlayerBase;
+    use PlayerBase, PlayerItems;
     protected $realmName;
     protected $characterName;
 
@@ -24,6 +25,4 @@ class Player extends Base
     {
         return "wow/character/" . $this->realmName . "/" . $this->characterName;
     }
-
-
 }

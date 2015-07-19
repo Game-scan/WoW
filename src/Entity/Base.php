@@ -47,4 +47,34 @@ abstract class Base
     {
         return $this->entityInformation;
     }
+
+    public function retreiveField($fieldName)
+    {
+        if (!$this->checkIfFieldExist($fieldName)) {
+            $this->addField($fieldName);
+            $this->loadInformation();
+        }
+    }
+
+    protected function checkIfFieldExist($fieldName)
+    {
+        if ($this->parameters === null || empty($this->parameters['fields'])) {
+            return false;
+        }
+        if (strpos($this->parameters['fields'], $fieldName) !== false) {
+            return true;
+        }
+        return false;
+    }
+
+    protected function addField($fieldName)
+    {
+        $fields = explode(',', $this->parameters['fields']);
+        if ($fields === false) {
+            $fields = array();
+        }
+        $fields[] = $fieldName;
+        $fields = array_unique($fields);
+        $this->parameters['fields'] = implode(",", $fields);
+    }
 }

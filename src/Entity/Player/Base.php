@@ -1,6 +1,5 @@
 <?php namespace GameScan\WoW\Entity\Player;
 
-
 trait Base
 {
     abstract public function getEntityInformations();
