@@ -6,7 +6,7 @@ class TwHostInformation extends HostInformations
 {
 
     const HOST = "https://us.api.battle.net/";
-    protected static $availableLocales = [
+    protected  $availableLocales = [
         'zh_TW',
     ];
 }
