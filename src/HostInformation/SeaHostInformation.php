@@ -6,7 +6,7 @@ class SeaHostInformation extends HostInformations
 {
 
     const HOST = "https://sea.api.battle.net/";
-    protected  $availableLocales = [
+    protected $availableLocales = [
         'en_US',
     ];
 }

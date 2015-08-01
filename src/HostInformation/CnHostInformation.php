@@ -6,7 +6,7 @@ class CnHostInformation extends HostInformations
 {
 
     const HOST = "https://api.battlenet.com.cn";
-    protected  $availableLocales = [
+    protected $availableLocales = [
         'zh_CN',
     ];
 }

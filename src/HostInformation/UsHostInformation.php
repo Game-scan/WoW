@@ -6,7 +6,7 @@ class UsHostInformation extends HostInformations
 {
 
     const HOST = "https://us.api.battle.net/";
-    protected  $availableLocales = [
+    protected $availableLocales = [
         'en_US',
         'es_MX',
         'pt_BR'

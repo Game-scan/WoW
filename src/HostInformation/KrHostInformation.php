@@ -6,7 +6,7 @@ class KrHostInformation extends HostInformations
 {
 
     const HOST = "https://kr.api.battle.net/";
-    protected  $availableLocales = [
+    protected $availableLocales = [
         'ko_KR',
     ];
 }
