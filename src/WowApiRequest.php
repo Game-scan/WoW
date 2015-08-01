@@ -57,6 +57,7 @@ class WowApiRequest extends GameApiRequest
         if ($parameters === null || $this->locale === null) {
             return $parameters;
         }
-        return $parameters['locale'] = $this->locale;
+        $parameters['locale'] = $this->locale;
+        return $parameters;
     }
 }
