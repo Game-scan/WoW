@@ -2,6 +2,7 @@
 
 abstract class HostInformations
 {
+    protected $availableLocales = array();
     public function getHost()
     {
         return static::HOST;
@@ -9,6 +10,6 @@ abstract class HostInformations
 
     public function getAvailableLocales()
     {
-        return static::availableLocales;
+        return $this->availableLocales;
     }
 }
