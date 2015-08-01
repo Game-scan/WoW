@@ -109,4 +109,10 @@ trait Items
 
         return $this->getEntityInformations()->items->mainHand;
     }
+    public function offHand()
+    {
+        $this->retreiveField("items");
+
+        return isset($this->getEntityInformations()->items->offHand) ? $this->getEntityInformations()->items->offHand : null;
+    }
 }
