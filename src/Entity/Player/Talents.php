@@ -10,38 +10,32 @@ trait Talents
     {
         $talents = $this->getMainTalent();
         return $talents->talents;
-
     }
     public function mainTalentsGlyphs()
     {
         $talents = $this->getMainTalent();
         return $talents->glyphs;
-
     }
     public function mainTalentsSpec()
     {
         $talents = $this->getMainTalent();
         return $talents->spec;
-
     }
     public function mainTalentsCalcTalent()
     {
         $talents = $this->getMainTalent();
         return $talents->calcTalent;
-
     }
     public function mainTalentsCalcSpec()
     {
         $talents = $this->getMainTalent();
         return $talents->calcSpec;
-
     }
 
     public function mainTalentsCalcGlyph()
     {
         $talents = $this->getMainTalent();
         return $talents->calcGlyph;
-
     }
 
 
@@ -50,58 +44,55 @@ trait Talents
     {
         $talents = $this->getSecondaryTalent();
         return $talents->talents;
-
     }
     public function secondaryTalentsGlyphs()
     {
         $talents = $this->getSecondaryTalent();
         return $talents->glyphs;
-
     }
     public function secondaryTalentsSpec()
     {
         $talents = $this->getSecondaryTalent();
         return $talents->spec;
-
     }
     public function secondaryTalentsCalcTalent()
     {
         $talents = $this->getSecondaryTalent();
         return $talents->calcTalent;
-
     }
     public function secondaryTalentsCalcSpec()
     {
         $talents = $this->getSecondaryTalent();
         return $talents->calcSpec;
-
     }
 
     public function secondaryTalentsCalcGlyph()
     {
         $talents = $this->getSecondaryTalent();
         return $talents->calcGlyph;
-
     }
 
 
 
-    public function getMainTalent(){
+    public function getMainTalent()
+    {
         $this->retreiveField("talents");
         $talents = $this->getEntityInformations()->talents;
-        if(isset($talents[0]->selected) && $talents[0]->selected === true)
+        if (isset($talents[0]->selected) && $talents[0]->selected === true) {
             return $talents[0];
-        else
+        } else {
             return $talents[1];
+        }
     }
 
-    public function getSecondaryTalent(){
+    public function getSecondaryTalent()
+    {
         $this->retreiveField("talents");
         $talents = $this->getEntityInformations()->talents;
-        if(isset($talents[0]->selected) && $talents[0]->selected === true)
+        if (isset($talents[0]->selected) && $talents[0]->selected === true) {
             return $talents[1];
-        else
+        } else {
             return $talents[0];
+        }
     }
-
 }
