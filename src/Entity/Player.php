@@ -4,10 +4,11 @@ use GameScan\WoW\WowApiRequest;
 use GameScan\WoW\Entity\Player\Base as PlayerBase;
 use GameScan\WoW\Entity\Player\Items as PlayerItems;
 use GameScan\WoW\Entity\Player\Guild as PlayerGuild;
+use GameScan\WoW\Entity\Player\Talents as PlayerTalents;
 
 class Player extends Base
 {
-    use PlayerBase, PlayerItems, PlayerGuild;
+    use PlayerBase, PlayerItems, PlayerGuild, PlayerTalents;
     protected $realmName;
     protected $characterName;
 
