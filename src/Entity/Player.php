@@ -12,13 +12,18 @@ class Player extends Base
     protected $realmName;
     protected $characterName;
 
-    public function __construct(WowApiRequest $api, $realmName, $characterName, $locale = null)
+    public function __construct(WowApiRequest $api, $realmName, $characterName, $locale = null, array $scope = null)
     {
         $this->apiRequest = $api;
         $this->realmName = $realmName;
         $this->characterName = $characterName;
         if ($locale !== null) {
             $this->apiRequest->setLocale($locale);
+        }
+        if($scope !== null){
+            foreach($scope as $field){
+                $this->addField($field);
+            }
         }
         $this->loadInformation();
     }
