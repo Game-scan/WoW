@@ -74,7 +74,7 @@ The MIT License (MIT). Please see [License File](LICENSE) for more information.
 [ico-downloads]: https://img.shields.io/packagist/dt/Game-Scan/WoW.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/Game-Scan/WoW
-[link-travis]: https://travis-ci.org/Game-Scan/WoW
+[link-travis]: https://travis-ci.org/Game-scan/WoW
 [link-scrutinizer]: https://scrutinizer-ci.com/g/Game-Scan/WoW/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/Game-Scan/WoW
 [link-downloads]: https://packagist.org/packages/Game-Scan/WoW
