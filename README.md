@@ -41,7 +41,7 @@ $playerLevel = $player->level();
 
 ## Change log
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+Please see [CHANGELOG](CHANGELOG.MD) for more information what has changed recently.
 
 ## Testing
 
