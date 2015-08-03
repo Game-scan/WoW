@@ -3,7 +3,7 @@
 All Notable changes to Wow will be documented in this file
 
 
-## v0.2.9 - 2015-08-03
+## v0.2.10 - 2015-08-03
 
 ### Fixed
 - Syntax error on composer.json
