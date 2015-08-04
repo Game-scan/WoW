@@ -76,8 +76,7 @@ trait Talents
 
     public function getMainTalent()
     {
-        $this->retreiveField("talents");
-        $talents = $this->getEntityInformations()->talents;
+        $talents = $this->getTalents();
         if (isset($talents[0]->selected) && $talents[0]->selected === true) {
             return $talents[0];
         } else {
@@ -87,12 +86,18 @@ trait Talents
 
     public function getSecondaryTalent()
     {
-        $this->retreiveField("talents");
-        $talents = $this->getEntityInformations()->talents;
+        $talents = $this->getTalents();
         if (isset($talents[0]->selected) && $talents[0]->selected === true) {
             return $talents[1];
         } else {
             return $talents[0];
         }
+    }
+
+    public function getTalents()
+    {
+        $this->retreiveField("talents");
+        $talents = $this->getEntityInformations()->talents;
+        return $talents;
     }
 }
