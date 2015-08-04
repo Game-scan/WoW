@@ -20,8 +20,8 @@ class Player extends Base
         if ($locale !== null) {
             $this->apiRequest->setLocale($locale);
         }
-        if($scope !== null){
-            foreach($scope as $field){
+        if ($scope !== null) {
+            foreach ($scope as $field) {
                 $this->addField($field);
             }
         }

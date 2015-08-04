@@ -115,4 +115,18 @@ trait Items
 
         return isset($this->getEntityInformations()->items->offHand) ? $this->getEntityInformations()->items->offHand : null;
     }
+
+    public function shirt()
+    {
+        $this->retreiveField("items");
+
+        return $this->getEntityInformations()->items->shirt;
+    }
+
+    public function tabard()
+    {
+        $this->retreiveField("items");
+
+        return $this->getEntityInformations()->items->tabard;
+    }
 }
