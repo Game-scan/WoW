@@ -86,7 +86,7 @@ trait Talents
         return $talents[1];
     }
 
-    protected function getSelectedTalent($id)
+    protected function getSelectedTalent()
     {
         $talents = $this->getTalents();
         if (isset($talents[0]->selected) && $talents[0]->selected === true) {
