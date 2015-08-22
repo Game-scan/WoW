@@ -2,6 +2,16 @@
 
 All Notable changes to Wow will be documented in this file
 
+## v0.2.12 - 2015-08-23
+
+### Added
+- Progression player entity
+- Selected talent for player entity
+
+### Fixed
+- Main and secondary talent for player entity
+
+
 ## v0.2.11 - 2015-08-03
 
 ### Added
