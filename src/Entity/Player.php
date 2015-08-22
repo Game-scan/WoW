@@ -5,10 +5,11 @@ use GameScan\WoW\Entity\Player\Base as PlayerBase;
 use GameScan\WoW\Entity\Player\Items as PlayerItems;
 use GameScan\WoW\Entity\Player\Guild as PlayerGuild;
 use GameScan\WoW\Entity\Player\Talents as PlayerTalents;
+use GameScan\WoW\Entity\Player\Progression as PlayerProgression;
 
 class Player extends Base
 {
-    use PlayerBase, PlayerItems, PlayerGuild, PlayerTalents;
+    use PlayerBase, PlayerItems, PlayerGuild, PlayerTalents, PlayerProgression;
     protected $realmName;
     protected $characterName;
 

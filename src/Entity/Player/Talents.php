@@ -77,20 +77,22 @@ trait Talents
     public function getMainTalent()
     {
         $talents = $this->getTalents();
-        if (isset($talents[0]->selected) && $talents[0]->selected === true) {
-            return $talents[0];
-        } else {
-            return $talents[1];
-        }
+        return $talents[0];
     }
 
     public function getSecondaryTalent()
     {
         $talents = $this->getTalents();
+        return $talents[1];
+    }
+
+    protected function getSelectedTalent()
+    {
+        $talents = $this->getTalents();
         if (isset($talents[0]->selected) && $talents[0]->selected === true) {
-            return $talents[1];
-        } else {
             return $talents[0];
+        } else {
+            return $talents[1];
         }
     }
 
