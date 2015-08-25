@@ -8,6 +8,11 @@ abstract class HostInformations
         return static::HOST;
     }
 
+    public function getRegion()
+    {
+        return static::REGION;
+    }
+
     public function getAvailableLocales()
     {
         return $this->availableLocales;

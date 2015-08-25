@@ -77,4 +77,14 @@ abstract class Base
         $fields = array_unique($fields);
         $this->parameters['fields'] = implode(",", $fields);
     }
+
+    protected function getHost()
+    {
+        return $this->apiRequest->getHost();
+    }
+
+    protected function getRegion()
+    {
+        return $this->apiRequest->getRegion();
+    }
 }

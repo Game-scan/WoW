@@ -3,6 +3,9 @@
 trait Base
 {
     abstract public function getEntityInformations();
+    abstract public function getHost();
+    abstract public function getRegion();
+
     public function getLastModified()
     {
         return $this->getEntityInformations()->lastInformation;
@@ -57,5 +60,23 @@ trait Base
     public function totalHonorableKills()
     {
         return $this->getEntityInformations()->totalHonorableKills;
+    }
+
+    public function getAvatarUrl()
+    {
+        $host = str_replace(".api", '', $this->getHost());
+        $region = $this->getRegion();
+        return $host . "static-render/" . $region . "/" . $this->thumbnail();
+    }
+
+    public function getProfileMainUrl()
+    {
+        return str_replace("avatar", "profilemain", $this->getAvatarUrl());
+    }
+
+
+    public function getInsetUrl()
+    {
+        return str_replace("avatar", "inset", $this->getAvatarUrl());
     }
 }

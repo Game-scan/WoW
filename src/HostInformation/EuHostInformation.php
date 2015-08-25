@@ -6,6 +6,7 @@ class EuHostInformation extends HostInformations
 {
 
     const HOST = "https://eu.api.battle.net/";
+    const REGION = "eu";
     protected $availableLocales = [
         'en_GB',
         'es_ES',
