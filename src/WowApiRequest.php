@@ -17,13 +17,18 @@ class WowApiRequest extends GameApiRequest
         $this->host = $hostInformations;
     }
 
+    public function getHost()
+    {
+        return $this->host->getHost();
+    }
+
     public function setLocale($locale)
     {
         $this->checkHost();
         if ($this->isAvailableLocale($locale)) {
             $this->locale = $locale;
         } else {
-            LoggerFactory::getLogger()->info("The locale $locale isn't available for the host " . $this->host->getHost());
+            LoggerFactory::getLogger()->info("The locale $locale isn't available for the host " . $this->getHost());
         }
     }
     private function checkHost()
@@ -48,7 +53,7 @@ class WowApiRequest extends GameApiRequest
 
     private function buildUrl($ressourceToGrab)
     {
-        $ressourceToGrab = $this->host->getHost() . $ressourceToGrab;
+        $ressourceToGrab = $this->getHost() . $ressourceToGrab;
         return $ressourceToGrab;
     }
 
