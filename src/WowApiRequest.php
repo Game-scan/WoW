@@ -22,6 +22,11 @@ class WowApiRequest extends GameApiRequest
         return $this->host->getHost();
     }
 
+    public function getRegion()
+    {
+        return $this->host->getRegion();
+    }
+
     public function setLocale($locale)
     {
         $this->checkHost();
