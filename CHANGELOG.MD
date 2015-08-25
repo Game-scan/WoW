@@ -2,6 +2,12 @@
 
 All Notable changes to Wow will be documented in this file
 
+## v0.2.13 - 2015-08-26
+
+### Added
+- Url for player images
+
+
 ## v0.2.12 - 2015-08-23
 
 ### Added
