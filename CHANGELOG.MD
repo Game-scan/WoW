@@ -2,6 +2,12 @@
 
 All Notable changes to Wow will be documented in this file
 
+## v0.2.14 - 2015-08-27
+
+### Added
+- Player Feed Entity
+
+
 ## v0.2.13 - 2015-08-26
 
 ### Added
