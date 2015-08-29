@@ -18,7 +18,7 @@ class CharacterClass extends Base
         $classes = $this->getClasses();
         $classesSet = array();
         foreach ($classes as $characterClass) {
-            $classesSet[$characterClass->id] = $characterClass->name ;
+            $classesSet[$characterClass->id] = $characterClass->name;
         }
         return  $classesSet;
     }
