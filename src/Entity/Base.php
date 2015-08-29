@@ -87,4 +87,9 @@ abstract class Base
     {
         return $this->apiRequest->getRegion();
     }
+
+    protected function getApiRequest()
+    {
+        return $this->apiRequest;
+    }
 }
