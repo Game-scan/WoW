@@ -14,6 +14,15 @@ abstract class Base
     protected $parameters = null;
 
 
+    public function __construct(WowApiRequest $api, $locale = null)
+    {
+        $this->apiRequest = $api;
+        if ($locale !== null) {
+            $this->apiRequest->setLocale($locale);
+        }
+        $this->loadInformation();
+    }
+
     public function setApiRequest(WowApiRequest $apiRequest)
     {
         $this->apiRequest = $apiRequest;
@@ -86,5 +95,10 @@ abstract class Base
     protected function getRegion()
     {
         return $this->apiRequest->getRegion();
+    }
+
+    protected function getApiRequest()
+    {
+        return $this->apiRequest;
     }
 }

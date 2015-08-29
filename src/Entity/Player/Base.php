@@ -5,6 +5,7 @@ trait Base
     abstract public function getEntityInformations();
     abstract public function getHost();
     abstract public function getRegion();
+    abstract protected function getApiRequest();
 
     public function getLastModified()
     {
@@ -24,6 +25,14 @@ trait Base
     public function playerClass()
     {
         return $this->getEntityInformations()->class;
+    }
+    
+    public function playerClassName(array $className = null)
+    {
+        if ($className === null) {
+            $className = (new \GameScan\WoW\Entity\CharacterClass($this->getApiRequest()))->getClassesName();
+        }
+        return $className[$this->playerClass()];
     }
 
     public function race()
