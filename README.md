@@ -9,6 +9,7 @@
 
 
 Librairy that make easier the use of the API WoW. Just provide credentials and use class to gather data from api.
+**This librairy has no association with Blizzard Entertainment.**
 
 ## Install
 
