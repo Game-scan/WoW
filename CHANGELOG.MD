@@ -2,6 +2,14 @@
 
 All Notable changes to Wow will be documented in this file
 
+## v0.4.0 - 2015-08-30
+
+### Added
+- Character classes entity
+- On player entity method for getting the class name
+- Tests (realms and character classes)
+
+
 ## v0.3.0 - 2015-08-27
 
 ### Added
