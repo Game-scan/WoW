@@ -1,5 +1,6 @@
 <?php namespace GameScan\WoW\Entity;
 
+use GameScan\WoW\EntityInformation;
 use GameScan\WoW\Exceptions\EntityInformationDecodeException;
 use GameScan\WoW\WowApiRequest;
 
@@ -49,7 +50,7 @@ abstract class Base
         if (JSON_ERROR_NONE !== json_last_error()) {
             throw new EntityInformationDecodeException(json_last_error_msg());
         }
-        return $entityInformation;
+        return (new EntityInformation($entityInformation));
     }
 
     public function __toString()
