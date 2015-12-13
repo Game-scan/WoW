@@ -2,7 +2,7 @@
 
 All Notable changes to Wow will be documented in this file
 
-## v0.4.2 - 2015-12-13
+## v0.4.3 - 2015-12-13
 
 ### Fixed
 - Composer.json  core version
