@@ -3,7 +3,7 @@
     "description": "World of Warcraft api module",
     "license": "MIT",
     "require": {
-        "game-scan/core": "v0.2.*",
+        "game-scan/core": "0.2.*",
         "mockery/mockery": "0.9.*"
     },
     "require-dev": {
