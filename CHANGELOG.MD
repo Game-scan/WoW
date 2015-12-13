@@ -4,6 +4,13 @@ All Notable changes to Wow will be documented in this file
 
 ## v0.4.2 - 2015-12-13
 
+### Fixed
+- Composer.json  core version
+
+
+
+## v0.4.2 - 2015-12-13
+
 ### Update
 - Composer.json to change the core module version - laravel compatibility 
 
